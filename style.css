@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: bold;
+  color: #2F4F4F;
+  background: #fff;
+}
+
+.people {
+  display: flex;
+  justify-content: center;
+}
+.people__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+  grid-auto-flow: row;
+  padding: 30px 0 197px;
+}
+@media (max-width: 999px) {
+  .people__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+  }
+}
+
+.person {
+  position: relative;
+  text-align: center;
+  padding: 10px 10px 7px 10px;
+  border-radius: 10px;
+  transition: transform 1s;
+}
+.person:hover::before {
+  z-index: 10;
+  transform: scale(1.5);
+}
+.person::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 287px;
+  border-radius: 10px;
+}
+.person:hover::after {
+  background-color: #eee;
+}
+.person__photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+}
+.person__photo img {
+  width: 100%;
+  border-radius: 50%;
+}
+.person__rank {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #8B0000;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.person__details {
+  position: relative;
+}
+.person__name {
+  display: block;
+  margin-bottom: 9px;
+}
+.person__extra {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+}
+.person:hover .person__extra {
+  visibility: initial;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

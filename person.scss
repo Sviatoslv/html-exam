@@ -1,0 +1,84 @@
+.person {
+  position: relative;
+  text-align: center;
+  padding: 10px 10px 7px 10px;
+  border-radius: 10px;
+  transition: transform 1s;
+
+  &:hover::before {
+    z-index: 10;
+    transform: scale(1.5);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 287px;
+
+    border-radius: 10px;
+  }
+
+  &:hover::after {
+    background-color: #eee;
+  }
+  
+  &__photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  
+  &__photo img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  &__rank {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    transform: translateY(-50%);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: 16px;
+    color: #8B0000;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  &__details {
+    position: relative;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 9px;
+  }
+  
+  &__extra {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;    
+  
+    font-size: 18px;
+    font-weight: normal;
+    color: #000;
+  }
+
+  &:hover &__extra {
+    visibility: initial;
+    display: block;
+  }
+}
