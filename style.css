@@ -34,12 +34,13 @@ body {
   padding: 10px 10px 7px 10px;
   border-radius: 10px;
   transition: transform 1s;
+  transition-delay: 1s;
+}
+.person:hover {
+  z-index: 10;
+  transform: scale(1.4);
 }
 .person:hover::before {
-  z-index: 10;
-  transform: scale(1.5);
-}
-.person::before {
   content: "";
   position: absolute;
   top: 0;
@@ -47,8 +48,6 @@ body {
   width: 100%;
   min-height: 287px;
   border-radius: 10px;
-}
-.person:hover::after {
   background-color: #eee;
 }
 .person__photo {
@@ -62,6 +61,11 @@ body {
 .person__photo img {
   width: 100%;
   border-radius: 50%;
+  transition: 1s;
+  transition-delay: 1s;
+}
+.person:hover .person__photo img {
+  border-radius: 60px;
 }
 .person__rank {
   position: absolute;
