@@ -1,0 +1,21 @@
+.people {
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    grid-column-gap: 10px;
+    grid-auto-flow: row;
+  
+    padding: 20px 0 160px;
+  }
+  
+    
+  @media (max-width: 999px) {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 220px);
+    }
+  }
+}
