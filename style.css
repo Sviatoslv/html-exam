@@ -16,7 +16,7 @@ body {
 .people__wrapper {
   display: grid;
   grid-template-columns: repeat(4, 220px);
-  grid-column-gap: 10px;
+  grid-gap: 10px;
   grid-auto-flow: row;
   padding: 20px 0 160px;
 }
@@ -89,7 +89,7 @@ body {
 }
 .person__name {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .person__extra {
   position: absolute;

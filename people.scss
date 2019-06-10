@@ -5,7 +5,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 220px);
-    grid-column-gap: 10px;
+    grid-gap: 10px;
     grid-auto-flow: row;
   
     padding: 20px 0 160px;
